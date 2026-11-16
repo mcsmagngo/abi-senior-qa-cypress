@@ -1,0 +1,24 @@
+{
+  "name": "abi-senior-qa-serverest",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Desafio Senior QA ABI: tres testes E2E de frontend e tres testes de API no ServeRest com Cypress e JavaScript.",
+  "scripts": {
+    "test": "cypress run",
+    "test:frontend": "cypress run --spec 'cypress/e2e/frontend/**/*.cy.js'",
+    "test:api": "cypress run --spec 'cypress/e2e/api/**/*.cy.js'",
+    "test:chrome": "cypress run --browser chrome",
+    "test:open": "cypress open",
+    "ci": "npm run lint && npm run test:chrome",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "cypress": "^15.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
